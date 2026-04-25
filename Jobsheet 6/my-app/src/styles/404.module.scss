@@ -1,3 +1,6 @@
+// meng-import untuk mengakses font dari google fonts
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+
 .error {
     width: 100vw;
     height: 100vh;
@@ -5,8 +8,42 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    // menambahkan background bergradasi 
+    background: linear-gradient(135deg, #0f172a, #3b0764, #000000);
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
 
-    &_image {
+    &_image { 
         width: 300px;
+
+    }
+
+    h1 {
+        // terdapat font gradasi 
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #a855f7, #ec4899);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.2;
+    }
+
+    p {
+        // terdapat warna font putih ke abu-abuan
+        font-size: 1.2rem;
+        color: #d1d5db;
+        max-width: 600px;
+        margin: 0.5rem auto;
+        line-height: 1.6;
+        
+        &:last-child {
+            font-size: 1rem;
+            color: #9ca3af;
+            margin-top: 1.5rem;
+        }
     }
 }
