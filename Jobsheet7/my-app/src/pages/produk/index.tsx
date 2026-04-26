@@ -22,7 +22,7 @@ const kategori = () => {
   // }
   // },[]);
 
-  useEffect(() => {
+  const fetchProducts = () => {
     fetch("/api/produk")
     .then((response) => response.json())
     .then((responsedata) => {
@@ -32,11 +32,16 @@ const kategori = () => {
     .catch((error) => {
       console.error("Error fetching produk: ", error);
     });
+  };
+
+  useEffect(() => {
+    fetchProducts();
   },[]);
 
   return (
     <div>
       <h1>Daftar Produk</h1>
+      <button onClick={fetchProducts} style={{ marginBottom: '10px' }}>Refresh Data</button>
       {products.map((products:ProductType) => (
         <div key={products.id}>
           <h2>{products.name}</h2>
