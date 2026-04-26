@@ -39,7 +39,7 @@ const kategori = () => {
         <div key={products.id}>
           <h2>{products.name}</h2>
           <p>Harga: {products.price}</p>
-          <p>Ukuran: {products.size}</p>
+          <p>Ukuran: {products.size}</p><hr />
           {/* <p>Warna: {products.warna}</p> */}
         </div>
       ))}
