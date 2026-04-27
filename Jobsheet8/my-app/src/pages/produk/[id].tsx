@@ -8,13 +8,13 @@ const halamanProduk = () => {
     // console.log(Router);
     const {query} = useRouter();
     const { data, error, isLoading } = useSWR (
-        query.id ? '/api/produk/${query.id}' : null,
+        query.id ? `/api/produk?kategori=${query.id}` : null,
         fetcher
     )
     return (
         <div>
             <h1>Halaman Produk</h1>
-            <p>Produk: {query.id}</p>
+            <TampilanProduk products={isLoading ? [] : data?.data || []}/>
         </div>
     );
 };
