@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import TampilanProduk from "../views/produk";
+import TampilanProduk from "@/pages/views/produk";
 import useSWR from "swr";
 import fetcher from "../utils/db/swr/fetcher";
 
@@ -22,7 +22,7 @@ const kategori = () => {
 
   return (
     <div>
-      <TampilanProduk products={isLoading ? [] : data.data} />
+       <TampilanProduk products={isLoading? []: data.data} />
     </div>
   );
 };
