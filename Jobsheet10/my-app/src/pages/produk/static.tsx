@@ -1,11 +1,13 @@
 import TampilanProduk from "../../views/produk";
 import { ProductType } from "../../types/Produk.type";
 
+
 const halamanProdukStatic = (props: {products:ProductType[]}) => {
     const { products } = props;
     return (
         <div>
             <h1>Halaman Produk Static</h1>
+            <h1>Halaman Produk</h1>
             <TampilanProduk products={products} />
         </div>
     );
